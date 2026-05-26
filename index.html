@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Student Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+    <div class="logo">StudentHub</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+
+    <a href="#contact" class="contact-btn">Contact</a>
+
+    <div class="menu-btn" id="menuBtn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+      <h1>Smart Student Dashboard</h1>
+
+      <h3>
+        <span class="typing"></span>
+      </h3>
+
+      <p>
+        Manage tasks, save notes, organize study essentials and boost productivity in one modern dashboard.
+      </p>
+
+      <a href="#dashboard" class="hero-btn">
+        Open Dashboard
+      </a>
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <section class="portfolio-section" id="portfolio">
+
+    <div class="section-title">
+      <h2>My <span>Portfolio</span></h2>
+    </div>
+
+    <div class="portfolio-container">
+
+      <div class="portfolio-image">
+        <img src="images/profile.jpg" alt="profile">
+      </div>
+
+      <div class="portfolio-content">
+
+        <h3>Hello, I'm Asiya Kazi 👋</h3>
+
+        <p>
+          I am a frontend developer passionate about creating clean,
+          responsive and user-friendly web applications using HTML,
+          CSS and JavaScript. I enjoy designing modern dashboards
+          and improving my development skills through practical projects.
+        </p>
+
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>UI/UX</span>
+          <span>Responsive Design</span>
+        </div>
+
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DASHBOARD -->
+
+  <section class="dashboard-section" id="dashboard">
+
+    <div class="section-title">
+      <h2>Productivity <span>Dashboard</span></h2>
+    </div>
+
+    <div class="dashboard-grid">
+
+      <!-- TASKS -->
+
+      <div class="dashboard-card task-card">
+
+        <div class="card-header">
+          <h3>Tasks</h3>
+        </div>
+
+        <div class="task-inputs">
+          <input type="text" id="taskInput" placeholder="Enter task">
+
+          <input type="date" id="taskDate">
+
+          <button id="addTaskBtn">Add</button>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active-filter" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+      </div>
+
+      <!-- NOTES -->
+
+      <div class="dashboard-card">
+
+        <div class="card-header">
+          <h3>Notes</h3>
+        </div>
+
+        <textarea
+          id="notes"
+          placeholder="Write your notes here..."
+        ></textarea>
+
+        <button class="save-note-btn" id="saveNotes">
+          Save Notes
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="products-section" id="products">
+
+    <div class="section-title">
+      <h2>Student <span>Essentials</span></h2>
+    </div>
+
+    <div class="product-filters">
+
+      <button class="product-filter active-product" data-category="all">All</button>
+
+      <button class="product-filter" data-category="study">
+        Study Essentials
+      </button>
+
+      <button class="product-filter" data-category="gadgets">
+        Gadgets
+      </button>
+
+      <button class="product-filter" data-category="accessories">
+        Accessories
+      </button>
+
+      <button class="product-filter" data-category="books">
+        Books
+      </button>
+
+    </div>
+
+    <div class="products-grid">
+
+      <!-- STUDY -->
+
+      <div class="product-card study">
+        <img src="images/notebook.jpg">
+        <h3>Notebook</h3>
+        <p>₹50</p>
+      </div>
+
+      <div class="product-card study">
+        <img src="images/pen.jpg">
+        <h3>Pen</h3>
+        <p>₹120</p>
+      </div>
+
+      <div class="product-card study">
+        <img src="images/highlighter.jpg">
+        <h3>Highlighter</h3>
+        <p>₹80</p>
+      </div>
+
+      <div class="product-card study">
+        <img src="images/stickynotes.jpg">
+        <h3>Sticky Notes</h3>
+        <p>₹60</p>
+      </div>
+
+      <div class="product-card study">
+        <img src="images/planner.jpg">
+        <h3>Planner</h3>
+        <p>₹550</p>
+      </div>
+
+      <!-- GADGETS -->
+
+      <div class="product-card gadgets">
+        <img src="images/headphones.jpg">
+        <h3>Headphones</h3>
+        <p>₹2000</p>
+      </div>
+
+      <div class="product-card gadgets">
+        <img src="images/keyboard.jpg">
+        <h3>Keyboard</h3>
+        <p>₹1500</p>
+      </div>
+
+      <div class="product-card gadgets">
+        <img src="images/mouse.jpg">
+        <h3>Mouse</h3>
+        <p>₹700</p>
+      </div>
+
+      <div class="product-card gadgets">
+        <img src="images/tablet.jpg">
+        <h3>Tablet</h3>
+        <p>₹15000</p>
+      </div>
+
+      <div class="product-card gadgets">
+        <img src="images/stand.jpg">
+        <h3>Laptop Stand</h3>
+        <p>₹800</p>
+      </div>
+
+      <!-- ACCESSORIES -->
+
+      <div class="product-card accessories">
+        <img src="images/backpack.jpg">
+        <h3>Backpack</h3>
+        <p>₹1800</p>
+      </div>
+
+      <div class="product-card accessories">
+        <img src="images/bottle.jpg">
+        <h3>Water Bottle</h3>
+        <p>₹350</p>
+      </div>
+
+      <div class="product-card accessories">
+        <img src="images/lamp.jpg">
+        <h3>Desk Lamp</h3>
+        <p>₹700</p>
+      </div>
+
+      <div class="product-card accessories">
+        <img src="images/pencilcase.jpg">
+        <h3>Pencil Case</h3>
+        <p>₹250</p>
+      </div>
+
+      <div class="product-card accessories">
+        <img src="images/organizer.jpg">
+        <h3>Desk Organizer</h3>
+        <p>₹450</p>
+      </div>
+
+      <!-- BOOKS -->
+
+      <div class="product-card books">
+        <img src="images/python.jpg">
+        <h3>Python Book</h3>
+        <p>₹650</p>
+      </div>
+
+      <div class="product-card books">
+        <img src="images/javascript.jpg">
+        <h3>Javascript Guide</h3>
+        <p>₹700</p>
+      </div>
+
+      <div class="product-card books">
+        <img src="images/uiux.jpg">
+        <h3>UI/UX Design</h3>
+        <p>₹400</p>
+      </div>
+
+      <div class="product-card books">
+        <img src="images/css.jpg">
+        <h3>CSS Mastery</h3>
+        <p>₹550</p>
+      </div>
+
+      <div class="product-card books">
+        <img src="images/productivity.jpg">
+        <h3>Productivity Book</h3>
+        <p>₹850</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="skills-section" id="skills">
+
+    <div class="section-title">
+      <h2>My <span>Skills</span></h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-box">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML5</h3>
+      </div>
+
+      <div class="skill-box">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS3</h3>
+      </div>
+
+      <div class="skill-box">
+        <i class="fa-brands fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+
+      <div class="skill-box">
+        <i class="fa-brands fa-react"></i>
+        <h3>Responsive UI</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact-section" id="contact">
+
+    <div class="section-title">
+      <h2>Contact <span>Me</span></h2>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="email" placeholder="Your Email" required>
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
